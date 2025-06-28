@@ -3,7 +3,7 @@
 
 ![NYU](http://www.image-heberg.fr/files/17511109473856315196.png)
 
-NYU 2.0 est maintenant un langage de programmation complet pour le web , un vrai : **framework web complet** avec toutes les fonctionnalités modernes! Formulaires interactifs, authentification, upload de fichiers, API REST, commentaires, templates et bien plus - tout en français!
+NYU 2.0 est maintenant un langage de programmation avec toutes les fonctionnalités modernes! Formulaires interactifs, authentification, upload de fichiers, API REST, commentaires, templates et bien plus - tout en français!
 
 ## 🚀 Nouvelles Fonctionnalités NYU 2.0
 
@@ -373,6 +373,8 @@ curl http://localhost:5000/api/all
 
 ---
 
-**NYU 2.0** - *Le framework web français qui révolutionne le développement web francophone!* 🇫🇷✨🚀
+**NYU 2.0** - *Le langage de programmation français qui fonctionne comme un framework web et révolutionne le développement web francophone!* 🇫🇷✨🚀
 
 *Créez des sites web professionnels complets, entièrement en français, avec NYU 2.0!*
+
+**NYU est bien un langage de programmation ! et pas un framework comme on pourrait le penser, nyu est les deux a la fois : un langage de programmation spécialisé dans le web et un framework web**
