@@ -1,0 +1,30 @@
+
+# Calculatrice NYU - Programme console
+
+afficher "=== CALCULATRICE NYU ==="
+afficher ""
+
+# Variables pour les calculs
+variable a = 15
+variable b = 7
+
+afficher "Calculs de base:"
+calculer 15 + 7
+calculer 15 - 7  
+calculer 15 * 7
+calculer 15 / 7
+
+afficher ""
+afficher "Mathématiques avancées:"
+calculer puissance 2 8
+calculer pythagore 5 12
+calculer modulo 25 7
+
+# Base de données pour sauvegarder les résultats
+bd sauver addition "22"
+bd sauver puissance "256"
+bd sauver pythagore "13"
+
+afficher ""
+afficher "Résultats sauvegardés:"
+bd lister

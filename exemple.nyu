@@ -1,0 +1,36 @@
+
+# Exemple de programme NYU
+# Site web avec calculs mathématiques et base de données
+
+# Configuration du site web
+site port 5000
+site fond lightblue
+site titre "Mon Premier Site NYU"
+site contenu "Bienvenue sur mon site créé avec NYU!"
+
+# Variables et calculs
+variable age = 25
+variable prix = 19.99
+afficher "Votre âge:"
+afficher age
+
+# Mathématiques avancées
+calculer puissance 2 10
+calculer pythagore 3 4
+calculer modulo 17 5
+
+# Ajouter du contenu au site
+site contenu "Voici quelques calculs mathématiques:"
+site bouton "Calculatrice"
+site bouton "À propos"
+
+# Base de données
+bd sauver nom "Marie"
+bd sauver ville "Paris"
+bd sauver score "1250"
+
+afficher "Base de données créée!"
+bd lister
+
+# Le site web sera automatiquement lancé
+afficher "Site web prêt sur le port 5000!"
