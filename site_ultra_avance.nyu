@@ -1,0 +1,150 @@
+
+# NYU 2.0 - Site Ultra Avancé
+# Démonstration complète de toutes les nouvelles fonctionnalités
+
+# Configuration de base
+site port 5000
+site fond "#f8f9ff"
+site titre "NYU 2.0 - Framework Complet"
+
+# Activer l'authentification
+auth activer
+auth utilisateur admin admin@site.com admin123 admin
+auth utilisateur marie marie@site.com marie123 utilisateur
+
+# Créer des templates
+template créer base
+template contenu base "<div class='header'><h1>{{titre}}</h1><nav><a href='/'>Accueil</a> | <a href='/blog'>Blog</a> | <a href='/contact'>Contact</a></nav></div><main>{{contenu}}</main><footer><p>© 2024 NYU Framework</p></footer>"
+
+template créer article
+template contenu article "<article><h2>{{titre}}</h2><div class='meta'>{{date}} par {{auteur}}</div>{{contenu}}</article>"
+
+# Styles avancés
+style css "
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; }
+.header nav a { color: white; margin: 0 10px; text-decoration: none; }
+main { padding: 20px; min-height: 400px; }
+footer { background: #333; color: white; text-align: center; padding: 10px; }
+.commentaire { background: #f8f9fa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0; }
+form { max-width: 500px; }
+.galerie { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+"
+
+# Page d'accueil
+site contenu "🚀 Bienvenue sur NYU 2.0 - Le framework web français le plus avancé!"
+site contenu "Ce site démontre toutes les nouvelles fonctionnalités révolutionnaires."
+
+# Intégration réseaux sociaux
+social facebook https://monsite-nyu.com
+social twitter "Découvrez NYU 2.0!" https://monsite-nyu.com
+social linkedin https://monsite-nyu.com
+
+# Formulaire de contact
+formulaire créer contact /contact POST
+formulaire champ contact text nom "Votre nom"
+formulaire champ contact email email "Votre email"
+formulaire champ contact text sujet "Sujet"
+formulaire champ contact textarea message "Votre message"
+formulaire ajouter contact
+
+# Upload de fichiers
+upload activer
+
+# API REST
+api route /users GET utilisateurs
+api donnees /api/all
+
+# === PAGE BLOG ===
+page créer blog
+page changer blog
+template utiliser base
+page titre "Blog NYU"
+page contenu "📝 Articles et actualités du framework NYU"
+
+# Activer les commentaires sur le blog
+commentaire activer blog
+commentaire ajouter blog Admin "Bienvenue sur notre nouveau blog!"
+commentaire ajouter blog Marie "NYU 2.0 est incroyable!"
+commentaire afficher blog
+
+# === PAGE CONTACT ===
+page créer contact
+page changer contact
+template utiliser base
+page titre "Contact"
+page contenu "📧 Contactez-nous via le formulaire ci-dessous:"
+
+# Ajouter le formulaire à la page contact
+formulaire ajouter contact
+
+# === PAGE GALERIE ===
+page créer galerie
+page changer galerie
+template utiliser base
+page titre "Galerie"
+page contenu "🖼️ Galerie de fichiers uploadés:"
+upload galerie
+
+# === PAGE PRIVÉE (PROTÉGÉE) ===
+page créer admin
+page changer admin
+auth proteger admin
+template utiliser base
+page titre "Administration"
+page contenu "🔒 Zone d'administration réservée aux administrateurs"
+page contenu "Gestion des utilisateurs, modération des commentaires, etc."
+
+# Page de connexion
+auth page_connexion
+
+# === PAGE API DOCUMENTATION ===
+page créer api_doc
+page changer api_doc
+template utiliser base
+page titre "Documentation API"
+page contenu "🔌 API REST automatique disponible:"
+page contenu "• GET /api/all - Toutes les données"
+page contenu "• GET /api/users - Liste des utilisateurs"
+page contenu "• POST /api/contact - Envoyer un message"
+
+# Retour à l'accueil pour finaliser
+page changer accueil
+
+# Navigation
+site contenu "🧭 Navigation:"
+site bouton "Blog" "/blog"
+site bouton "Contact" "/contact" 
+site bouton "Galerie" "/galerie"
+site bouton "API_Doc" "/api_doc"
+site bouton "Admin" "/admin"
+site bouton "Connexion" "/connexion"
+
+# Base de données avec exemples
+bd sauver site_nom "NYU Framework" texte
+bd sauver version "2.0" texte
+bd sauver visiteurs "1500" nombre
+bd sauver derniere_maj "2024-01-20" date
+bd sauver statut "actif" texte
+
+# Afficher la BD sur le site
+bd web_afficher
+
+# Messages finaux
+afficher ""
+afficher "🎉 SITE NYU 2.0 ULTRA AVANCÉ CRÉÉ!"
+afficher "=================================="
+afficher "✅ Authentification activée"
+afficher "✅ Templates configurés"
+afficher "✅ Formulaires interactifs"
+afficher "✅ Upload de fichiers"
+afficher "✅ Système de commentaires"
+afficher "✅ API REST automatique"
+afficher "✅ Intégration réseaux sociaux"
+afficher "✅ Base de données persistante"
+afficher "✅ Pages protégées"
+afficher ""
+afficher "🌐 Visitez: http://localhost:5000"
+afficher "🔌 API: http://localhost:5000/api/all"
+afficher "🔐 Admin: admin@site.com / admin123"
+afficher ""
+afficher "🚀 NYU 2.0 - LE FRAMEWORK WEB FRANÇAIS ULTIME!"

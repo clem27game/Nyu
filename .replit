@@ -70,3 +70,19 @@ start = "ccls"
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[workflows]
+runButton = "Compiler et Démarrer NYU"
+
+[[workflows.workflow]]
+name = "Compiler et Démarrer NYU"
+author = 10543762
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "make -s"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./main démarrer site_ultra_avance.nyu"
