@@ -1,0 +1,110 @@
+
+# Site NYU Avancé - Exemple complet
+# Démonstration de toutes les fonctionnalités
+
+# Configuration du site principal
+site port 5000
+site fond "#e6f3ff"
+site titre "Mon Site NYU Avancé"
+
+# Styles personnalisés
+style police "Georgia, serif"
+style couleur_texte "#2c3e50"
+style css "h1 { text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 10px; }"
+
+# Contenu de la page d'accueil
+site contenu "Bienvenue sur mon site web créé entièrement avec NYU!"
+site contenu "Ce site démontre toutes les capacités avancées du langage NYU."
+
+# Créer des liens externes
+lien externe github https://github.com "Mon GitHub"
+lien externe youtube https://youtube.com "Mes Vidéos"
+lien externe linkedin https://linkedin.com "Profil LinkedIn"
+
+# Ajouter les liens à la page d'accueil
+lien ajouter github
+lien ajouter youtube
+lien ajouter linkedin
+
+# Variables et calculs
+variable age = 25
+variable experience = 5
+variable salaire = 45000
+
+# Calculs mathématiques
+calculer 45000 * 12
+calculer puissance 2 10
+calculer pythagore 3 4
+
+# Base de données avec types
+bd sauver nom "Marie Dupont" texte
+bd sauver age "28" nombre
+bd sauver ville "Paris" texte
+bd sauver email "marie@example.com" texte
+bd sauver score "1500" nombre
+bd sauver date_inscription "2024-01-15" date
+
+# Afficher la base de données sur le site
+bd web_afficher
+
+# Créer des pages multiples
+page créer apropos
+page créer services
+page créer contact
+page créer portfolio
+
+# === PAGE À PROPOS ===
+page changer apropos
+page titre "À Propos de Moi"
+style page_css "body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }"
+page contenu "Je suis développeuse passionnée par NYU!"
+page contenu "J'ai créé ce site pour démontrer les capacités du langage."
+page contenu "NYU permet de créer facilement des sites web interactifs."
+page bouton "Retour_Accueil" "/"
+page bouton "Mes_Services" "/services"
+
+# === PAGE SERVICES ===
+page changer services
+page titre "Mes Services"
+page contenu "🚀 Développement Web avec NYU"
+page contenu "📊 Création de bases de données"
+page contenu "🧮 Applications mathématiques"
+page contenu "🎨 Design et personnalisation"
+style page_css "ul { list-style-type: none; } li { padding: 10px; margin: 5px 0; background: #f8f9fa; border-left: 4px solid #007bff; }"
+page bouton "Contact" "/contact"
+page bouton "Portfolio" "/portfolio"
+
+# === PAGE CONTACT ===
+page changer contact
+page titre "Contactez-moi"
+page contenu "📧 Email: contact@monsite.com"
+page contenu "📱 Téléphone: +33 1 23 45 67 89"
+page contenu "🏠 Adresse: 123 Rue de la Paix, Paris"
+lien ajouter linkedin
+page bouton "Retour" "/"
+
+# === PAGE PORTFOLIO ===
+page changer portfolio
+page titre "Mon Portfolio"
+page contenu "Voici quelques-uns de mes projets réalisés avec NYU:"
+page contenu "✅ Site e-commerce avec base de données"
+page contenu "✅ Calculatrice scientifique avancée"
+page contenu "✅ Système de gestion d'inventaire"
+page contenu "✅ Application web de statistiques"
+
+# Retour à la page d'accueil pour finaliser
+page changer accueil
+site contenu "Navigation:"
+site bouton "À_Propos" "/apropos"
+site bouton "Services" "/services" 
+site bouton "Contact" "/contact"
+site bouton "Portfolio" "/portfolio"
+
+# Finalisation
+afficher "🌟 Site web NYU avancé créé avec succès!"
+afficher "✅ Pages multiples configurées"
+afficher "✅ Liens externes ajoutés"
+afficher "✅ Base de données intégrée"
+afficher "✅ Styles personnalisés appliqués"
+afficher ""
+afficher "🚀 Visitez votre site sur le port 5000!"

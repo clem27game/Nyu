@@ -1,7 +1,7 @@
 
 # 🇫🇷 NYU - Langage de Programmation Français
 
-NYU est un langage de programmation généraliste entièrement en français, inspiré de Ruby et Python. Il permet de créer facilement des sites web, gérer des bases de données et effectuer des calculs mathématiques avancés.
+NYU est un langage de programmation généraliste entièrement en français, inspiré de Ruby et Python. Il permet de créer facilement des sites web multi-pages avec liens externes, gérer des bases de données avancées et effectuer des calculs mathématiques complexes.
 
 ## 🚀 Installation et Utilisation
 
@@ -52,213 +52,217 @@ calculer pythagore 3 4        # √(3² + 4²) = 5
 calculer modulo 17 5          # 17 % 5 = 2
 ```
 
-### Sites Web
+## 🌐 Sites Web Avancés
 
-#### Configuration de base
+### Configuration de base
 ```nyu
 site port 5000                # Port du serveur
-site fond lightblue          # Couleur de fond
-site titre "Mon Site"        # Titre de la page
+site fond "#e6f3ff"           # Couleur de fond (hex/nom)
+site titre "Mon Site"         # Titre de la page
 ```
 
-#### Contenu
+### Contenu
 ```nyu
 site contenu "Bienvenue!"     # Ajouter du texte
 site bouton "Cliquez ici"     # Ajouter un bouton
 ```
 
-### Base de Données
-
-#### Sauvegarder des données
+### Pages Multiples
 ```nyu
-bd sauver nom "Jean"
-bd sauver age "30"
-bd sauver ville "Paris"
+page créer accueil            # Créer une nouvelle page
+page créer contact            # Créer page contact
+page changer accueil          # Changer la page active
+page titre "Accueil"          # Titre de la page active
+page contenu "Bienvenue"      # Contenu de la page active
+page bouton "Contact" "/contact"  # Bouton vers autre page
 ```
 
-#### Lire des données
+### Liens Externes
 ```nyu
-bd lire nom                   # Affiche: nom = Jean
-bd lister                     # Liste toutes les entrées
+# Créer un lien externe
+lien externe github https://github.com "Mon GitHub"
+lien externe google https://google.com "Google"
+
+# Ajouter le lien à la page courante
+lien ajouter github
+lien ajouter google
 ```
 
-### Structures de Contrôle
-
-#### Conditions (en développement)
+### Styles Avancés
 ```nyu
-si age > 18
-    afficher "Majeur"
+style police "Georgia, serif"          # Changer la police
+style couleur_texte "#2c3e50"         # Couleur du texte
+style css "h1 { color: blue; }"       # CSS personnalisé global
+style page_css "p { font-size: 18px; }" # CSS pour page actuelle
 ```
 
-#### Boucles (en développement)
+## 🗄️ Base de Données Avancée
+
+### Sauvegarder avec types
 ```nyu
-répéter 5
-    afficher "Bonjour!"
+bd sauver nom "Jean Dupont" texte
+bd sauver age "30" nombre
+bd sauver date "2024-01-15" date
+bd sauver email "jean@mail.com" texte
 ```
 
-## 🌐 Création de Sites Web
+### Lire et gérer
+```nyu
+bd lire nom                   # Affiche: nom = Jean Dupont (texte)
+bd lister                     # Liste toutes les entrées avec types
+bd supprimer nom              # Supprimer une entrée
+bd web_afficher               # Afficher BD sur site web en tableau
+```
 
-NYU peut créer des sites web interactifs qui s'ouvrent automatiquement dans Replit:
+## 🎨 Personnalisation Complète
+
+### Couleurs supportées
+- **Noms CSS**: `red`, `blue`, `green`, `orange`, `purple`, `lightblue`
+- **Hexadécimal**: `#ff0000`, `#00ff00`, `#0000ff`, `#e6f3ff`
+- **Dégradés CSS**: Support complet dans `style css`
+
+### Polices supportées
+- **Systèmes**: `Arial`, `Georgia`, `Times New Roman`, `Courier New`
+- **Stacks**: `"Arial, sans-serif"`, `"Georgia, serif"`
+- **Web fonts**: Via CSS personnalisé
+
+## 🌟 Exemple Site Complet
 
 ```nyu
-# Configuration du site
+# Configuration principale
 site port 5000
-site fond #f0f8ff
-site titre "Ma Page Web NYU"
+site fond "#e6f3ff"
+site titre "Mon Site NYU"
 
-# Contenu de la page
+# Styles
+style police "Georgia, serif"
+style couleur_texte "#2c3e50"
+style css "h1 { text-align: center; border-bottom: 3px solid #3498db; }"
+
+# Page d'accueil
 site contenu "Bienvenue sur mon site!"
-site contenu "Créé avec le langage NYU"
-site bouton "Accueil"
-site bouton "À propos"
-site bouton "Contact"
+
+# Liens externes
+lien externe github https://github.com "Mon GitHub"
+lien externe linkedin https://linkedin.com "LinkedIn"
+lien ajouter github
+lien ajouter linkedin
+
+# Créer des pages
+page créer apropos
+page créer contact
+
+# Page À propos
+page changer apropos
+page titre "À Propos"
+page contenu "Je suis développeur NYU!"
+style page_css "body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }"
+page bouton "Accueil" "/"
+
+# Page Contact
+page changer contact
+page titre "Contact"
+page contenu "Email: contact@monsite.com"
+page bouton "À_Propos" "/apropos"
+
+# Navigation sur accueil
+page changer accueil
+site bouton "À_Propos" "/apropos"
+site bouton "Contact" "/contact"
+
+# Base de données
+bd sauver visiteurs "1250" nombre
+bd sauver derniere_visite "2024-01-15" date
+bd web_afficher
 ```
 
-Le site sera automatiquement accessible sur `https://votre-repl.replit.dev` quand le port 5000 est utilisé.
+## 🔧 Fonctionnalités Avancées
 
-## 🗄️ Gestion de Base de Données
+- **🌐 Sites Multi-Pages**: Navigation fluide entre pages
+- **🔗 Liens Externes**: Intégration de liens vers sites externes
+- **🎨 CSS Personnalisé**: Contrôle total du design
+- **📊 Base de Données Typée**: Stockage avec types (texte, nombre, date)
+- **📱 Design Responsive**: Optimisé pour tous les écrans
+- **🚀 Serveur HTTP**: Gestion des routes automatique
+- **💾 Persistance**: Base de données en mémoire pendant exécution
 
-NYU inclut un système de base de données simple pour persister les données:
+## 📁 Structure de Navigation
 
+NYU génère automatiquement:
+- **Menu de navigation** sur chaque page
+- **Routes automatiques**: `/`, `/page1`, `/page2`, etc.
+- **Liens de retour** entre les pages
+- **Gestion d'erreurs 404** pour pages inexistantes
+
+## 🎯 Cas d'Usage
+
+### Site Portfolio
 ```nyu
-# Sauvegarder
-bd sauver utilisateur "Alice"
-bd sauver score "1500"
-bd sauver niveau "expert"
-
-# Lire
-bd lire utilisateur          # Affiche: utilisateur = Alice
-
-# Lister tout
-bd lister                    # Affiche toutes les entrées
+page créer portfolio
+page changer portfolio
+page titre "Mon Portfolio"
+page contenu "Mes projets réalisés avec NYU"
+lien externe github https://github.com/monprofil "Code Source"
+lien ajouter github
 ```
 
-## 🧮 Mathématiques Avancées
-
-### Théorème de Pythagore
+### Site E-commerce Simple
 ```nyu
-calculer pythagore 3 4       # Résultat: 5
-calculer pythagore 5 12      # Résultat: 13
+bd sauver produit1 "Ordinateur" texte
+bd sauver prix1 "899.99" nombre
+bd sauver stock1 "5" nombre
+bd web_afficher
 ```
 
-### Puissances
+### Blog Personnel
 ```nyu
-calculer puissance 2 10      # 2^10 = 1024
-calculer puissance 3 4       # 3^4 = 81
+page créer blog
+page changer blog
+page titre "Mon Blog"
+bd sauver article1 "Premier article NYU" texte
+bd sauver date1 "2024-01-15" date
 ```
 
-### Modulo
-```nyu
-calculer modulo 17 5         # 17 % 5 = 2
-calculer modulo 100 7        # 100 % 7 = 2
-```
+## 🏆 Avantages NYU 2.0
 
-## 📁 Extension de Fichier
+1. **🇫🇷 100% Français**: Parfait pour l'apprentissage
+2. **🌐 Multi-Pages**: Sites web complexes
+3. **🔗 Liens Externes**: Connexion avec l'internet
+4. **🎨 Design Libre**: CSS personnalisé illimité
+5. **📊 Base de Données**: Stockage structuré avec types
+6. **⚡ Temps Réel**: Changements instantanés
+7. **📱 Moderne**: Standards web actuels
+8. **🛠️ Extensible**: Architecture modulaire
 
-Tous les programmes NYU utilisent l'extension `.nyu`:
-- `mon_site.nyu`
-- `calculatrice.nyu`
-- `application.nyu`
+## 🚧 Fonctionnalités Futures
 
-## 🎯 Exemples Complets
-
-### Site Web Simple
-```nyu
-# mon_site.nyu
-site port 5000
-site fond lightgreen
-site titre "Ma Première Page NYU"
-site contenu "Bienvenue sur mon site!"
-site contenu "NYU rend la programmation accessible en français"
-site bouton "Accueil"
-site bouton "Services"
-```
-
-### Programme de Calcul
-```nyu
-# calculatrice.nyu
-variable a = 10
-variable b = 5
-
-afficher "Calculs avec a=10 et b=5:"
-calculer 10 + 5
-calculer 10 * 5
-calculer puissance 10 2
-
-bd sauver resultat_addition "15"
-bd sauver resultat_multiplication "50"
-```
-
-### Application Mixte
-```nyu
-# app_complete.nyu
-# Site web avec calculs et base de données
-
-variable prix_unitaire = 25.50
-variable quantite = 3
-
-site port 5000
-site fond #e6f3ff
-site titre "Calculateur de Prix"
-site contenu "Application de calcul de prix"
-
-calculer 25.50 * 3
-bd sauver prix_total "76.50"
-
-site bouton "Calculer"
-site bouton "Historique"
-
-afficher "Application prête!"
-```
-
-## 🔧 Fonctionnalités Techniques
-
-- **Serveur Web Intégré**: Démarre automatiquement sur le port configuré
-- **Base de Données Persistante**: Stockage en mémoire pendant l'exécution
-- **Calculs Mathématiques**: Opérations de base et avancées
-- **Interface Française**: Toutes les commandes en français
-- **Syntaxe Intuitive**: Inspirée de Ruby/Python mais simplifiée
-
-## 🎨 Personnalisation Web
-
-### Couleurs de Fond Supportées
-- `lightblue`, `lightgreen`, `lightyellow`
-- Codes hexadécimaux: `#ff0000`, `#00ff00`, `#0000ff`
-- Noms CSS: `red`, `blue`, `green`, `orange`, `purple`
-
-### Éléments HTML Générés
-- Paragraphes pour le contenu
-- Boutons interactifs
-- Styles CSS automatiques
-- Design responsive
-
-## 🚧 Développement Futur
-
-### Fonctionnalités à venir:
-- [ ] Conditions `si/sinon`
-- [ ] Boucles `répéter/tant_que`
-- [ ] Fonctions personnalisées
-- [ ] Import/export de modules
-- [ ] Base de données persistante sur fichier
+### En développement:
 - [ ] Formulaires web interactifs
-- [ ] API REST intégrée
+- [ ] Upload de fichiers/images
+- [ ] Base de données persistante (fichiers)
+- [ ] API REST automatique
+- [ ] Authentification utilisateurs
+- [ ] Templates de pages
+- [ ] Système de commentaires
+- [ ] Intégration réseaux sociaux
 
-## 🏆 Avantages de NYU
+## 📞 Support et Documentation
 
-1. **100% en Français**: Idéal pour l'apprentissage
-2. **Simplicité**: Syntaxe claire et intuitive
-3. **Polyvalent**: Web, calculs, base de données
-4. **Rapide**: Démarrage instantané des projets
-5. **Intégré**: Serveur web et BD inclus
-6. **Replit-Compatible**: Fonctionne parfaitement sur Replit
+### Commandes rapides:
+```bash
+./main aide                   # Aide complète
+./main démarrer exemple.nyu   # Exemple simple
+./main démarrer site_avance.nyu # Exemple avancé
+```
 
-## 📞 Support
-
-NYU est conçu pour être simple et intuitif. En cas de problème:
-1. Vérifiez la syntaxe avec `./main aide`
-2. Consultez les exemples fournis
-3. Testez avec des programmes simples d'abord
+### Dépannage:
+1. **Site ne se charge pas**: Vérifiez le port avec `site port 5000`
+2. **Page vide**: Utilisez `page contenu "texte"` après `page changer`
+3. **Liens ne marchent pas**: Format: `lien externe nom url texte`
+4. **Styles pas appliqués**: Utilisez `style css "règles CSS"`
 
 ---
 
-**NYU** - *Le langage de programmation qui parle français!* 🇫🇷✨
+**NYU 2.0** - *Le langage web français nouvelle génération!* 🇫🇷✨🌐
+
+Créez des sites web professionnels entièrement en français avec NYU!
