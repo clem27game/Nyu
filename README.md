@@ -1,5 +1,5 @@
 
-# 🇫🇷 NYU 2.0 - Framework Web Français Complet
+# 🇫🇷 NYU 2.0 - Langage de programmation pour le web - Français Complet
 
 ![NYU](http://www.image-heberg.fr/files/17511109473856315196.png)
 
