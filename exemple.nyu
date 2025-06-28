@@ -4,9 +4,9 @@
 
 # Configuration du site web
 site port 5000
-site fond lightblue
+site fond pink
 site titre "Mon Premier Site NYU"
-site contenu "Bienvenue sur mon site créé avec NYU!"
+site contenu "Bienvenue sur mon site créé avec NYU!🤣🐝"
 
 # Variables et calculs
 variable age = 25
@@ -15,9 +15,9 @@ afficher "Votre âge:"
 afficher age
 
 # Mathématiques avancées
-calculer puissance 2 10
-calculer pythagore 3 4
-calculer modulo 17 5
+calculer puissance 5 6
+calculer pythagore 8 9
+calculer modulo 98 13
 
 # Ajouter du contenu au site
 site contenu "Voici quelques calculs mathématiques:"
