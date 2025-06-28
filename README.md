@@ -1,7 +1,9 @@
 
 # 🇫🇷 NYU 2.0 - Framework Web Français Complet
 
-NYU 2.0 est maintenant un **framework web complet** avec toutes les fonctionnalités modernes! Formulaires interactifs, authentification, upload de fichiers, API REST, commentaires, templates et bien plus - tout en français!
+![NYU](http://www.image-heberg.fr/files/17511109473856315196.png)
+
+NYU 2.0 est maintenant un langage de programmation complet pour le web , un vrai : **framework web complet** avec toutes les fonctionnalités modernes! Formulaires interactifs, authentification, upload de fichiers, API REST, commentaires, templates et bien plus - tout en français!
 
 ## 🚀 Nouvelles Fonctionnalités NYU 2.0
 
@@ -25,7 +27,7 @@ make
 
 ### Lancer un site NYU 2.0
 ```bash
-./main démarrer site_ultra_avance.nyu
+./Nyu/main démarrer site_ultra_avance.nyu
 ```
 
 ### Aide complète

@@ -1,0 +1,11 @@
+5
+site_nom|"NYU|Framework"|Sat Jun 28 11:41:10 2025
+
+version|"2.0"|texte|Sat Jun 28 11:41:10 2025
+
+visiteurs|"1500"|nombre|Sat Jun 28 11:41:10 2025
+
+derniere_maj|"2024-01-20"|date|Sat Jun 28 11:41:10 2025
+
+statut|"actif"|texte|Sat Jun 28 11:41:10 2025
+
